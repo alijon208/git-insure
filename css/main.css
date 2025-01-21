@@ -1,0 +1,149 @@
+body {
+  font-family: "Karla";
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Karla";
+}
+
+.button {
+  padding: 8px 15px;
+  border: 2px solid rgb(44, 40, 48);
+  color: rgb(44, 40, 48);
+  font-family: "Karla";
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.2px;
+  letter-spacing: 1.5px;
+  transition: 500ms;
+  background-color: transparent;
+}
+.button:hover {
+  background-color: rgb(44, 40, 48);
+  color: white;
+}
+
+/* karla-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/karla-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* karla-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/karla-v31-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/dm-serif-display-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.header {
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-list-item {
+  margin-right: 20px;
+}
+
+.header-item-link {
+  color: rgb(131, 125, 136);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15.2px;
+  letter-spacing: 1.5px;
+}
+.header-item-link:hover {
+  color: rgb(44, 40, 48);
+}
+
+.header-hamburger {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  display: none;
+}
+
+.hamburger--open {
+  background-image: url("/img/hamburger-open.svg");
+}
+
+.hamburger--close {
+  background-image: url("/img/hamburger-close.svg");
+}
+
+@media only screen and (max-width: 560px) {
+  .header-nav {
+    position: absolute;
+    background-color: rgb(44, 40, 48);
+    top: 71px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 71px);
+    flex-direction: column;
+    text-align: center;
+  }
+  .header-hamburger {
+    display: inline-block;
+  }
+  .header-nav-list {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .header-list-item {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .header-item-link {
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 1.3636363745px;
+    color: white;
+  }
+  .header-link {
+    padding: 12px 50px;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 1.3636363745px;
+  }
+}

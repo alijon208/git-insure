@@ -1,0 +1,32 @@
+body{
+    font-family: "Karla";
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    font-family: "Karla";
+}
+.button {
+    padding: 8px 15px;
+    border: 2px solid $dark;
+    color: $dark;
+    font-family: 'Karla';
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15.2px;
+    letter-spacing: 1.5px;
+    transition: 500ms;
+    background-color: transparent;
+    &:hover{
+        background-color: $dark;
+        color: white;
+    }
+}
