@@ -18,6 +18,21 @@ a {
   font-family: "Karla";
 }
 
+.title {
+  font-family: "DM Serif Display";
+  position: relative;
+  padding-top: 80px;
+}
+.title::after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: white;
+  content: "";
+}
+
 .button {
   padding: 8px 15px;
   border: 2px solid rgb(44, 40, 48);
@@ -114,6 +129,7 @@ a {
   .header-nav {
     position: absolute;
     background-color: rgb(44, 40, 48);
+    display: none;
     top: 71px;
     left: 0;
     width: 100%;
@@ -146,4 +162,67 @@ a {
     line-height: 40px;
     letter-spacing: 1.3636363745px;
   }
+}
+.intro {
+  background-color: rgb(45, 38, 65);
+  position: relative;
+  max-width: 1490px;
+  margin: 0 auto;
+}
+.intro::after {
+  position: absolute;
+  background-image: url("/img/intro-after.png");
+  background-repeat: no-repeat;
+  content: "";
+  width: 200px;
+  height: 649px;
+  bottom: -400px;
+  left: 0;
+}
+.intro::before {
+  position: absolute;
+  background-image: url("/img/intro-before.png");
+  background-repeat: no-repeat;
+  content: "";
+  width: 697px;
+  height: 649px;
+  right: -260px;
+}
+
+.intro-container {
+  display: flex;
+  padding-top: 80px;
+}
+
+.intro-text-wrapper {
+  margin-top: 60px;
+}
+
+.intro-title {
+  color: white;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  max-width: 540px;
+  margin: 0;
+}
+
+.intro-text {
+  line-height: 26px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.intro-link {
+  border: 1px solid white;
+  color: white;
+  z-index: 1;
+}
+.intro-link:hover {
+  color: rgb(44, 40, 48);
+  background-color: white;
+}
+
+.intro-img {
+  margin-bottom: -100px;
 }
