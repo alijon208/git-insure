@@ -1,11 +1,8 @@
 body {
   font-family: "Karla";
-}
-
-.container {
-  max-width: 1110px;
+  overflow-x: hidden;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 10px;
 }
 
 ul, ol {
@@ -16,38 +13,6 @@ ul, ol {
 a {
   text-decoration: none;
   font-family: "Karla";
-}
-
-.title {
-  font-family: "DM Serif Display";
-  position: relative;
-  padding-top: 80px;
-}
-.title::after {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 150px;
-  height: 1px;
-  background-color: white;
-  content: "";
-}
-
-.button {
-  padding: 8px 15px;
-  border: 2px solid rgb(44, 40, 48);
-  color: rgb(44, 40, 48);
-  font-family: "Karla";
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 15.2px;
-  letter-spacing: 1.5px;
-  transition: 500ms;
-  background-color: transparent;
-}
-.button:hover {
-  background-color: rgb(44, 40, 48);
-  color: white;
 }
 
 /* karla-regular - latin */
@@ -78,91 +43,36 @@ a {
   padding: 10px 0;
 }
 
-.header-container {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
 
-.header-nav-list {
+.header__list {
   display: flex;
 }
 
-.header-list-item {
+.header__item {
   margin-right: 20px;
 }
 
-.header-item-link {
+.header__item-link {
   color: rgb(131, 125, 136);
   font-size: 13px;
   font-weight: 700;
   line-height: 15.2px;
   letter-spacing: 1.5px;
 }
-.header-item-link:hover {
+.header__item-link:hover {
   color: rgb(44, 40, 48);
 }
 
-.header-hamburger {
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  display: none;
-}
-
-.hamburger--open {
-  background-image: url("/img/hamburger-open.svg");
-}
-
-.hamburger--close {
-  background-image: url("/img/hamburger-close.svg");
-}
-
-@media only screen and (max-width: 560px) {
-  .header-nav {
-    position: absolute;
-    background-color: rgb(44, 40, 48);
-    display: none;
-    top: 71px;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 71px);
-    flex-direction: column;
-    text-align: center;
-  }
-  .header-hamburger {
-    display: inline-block;
-  }
-  .header-nav-list {
-    flex-direction: column;
-    margin-top: 40px;
-  }
-  .header-list-item {
-    margin: 0;
-    margin-bottom: 20px;
-  }
-  .header-item-link {
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 1.3636363745px;
-    color: white;
-  }
-  .header-link {
-    padding: 12px 50px;
-    border: 2px solid white;
-    color: white;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 1.3636363745px;
-  }
-}
 .intro {
   background-color: rgb(45, 38, 65);
   position: relative;
@@ -189,40 +99,82 @@ a {
   right: -260px;
 }
 
-.intro-container {
+.intro__container {
   display: flex;
   padding-top: 80px;
 }
 
-.intro-text-wrapper {
+.intro__content {
   margin-top: 60px;
+  margin-right: 50px;
 }
 
-.intro-title {
+.intro__text {
+  line-height: 26px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.intro__link {
+  border: 1px solid white;
+  color: white;
+  z-index: 1;
+}
+.intro__link:hover {
+  color: rgb(44, 40, 48);
+  background-color: white;
+}
+
+.intro__img {
+  margin-bottom: -100px;
+  margin-top: 100px;
+}
+
+.plans-link {
+  padding: 10px 20px;
+  transition: 500ms;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}
+.plans-link:hover {
+  background-color: white;
+  color: rgb(45, 38, 65);
+}
+
+.plans-link--dark {
+  padding: 10px 20px;
+  border: 2px solid rgb(44, 40, 48);
+  color: rgb(44, 40, 48);
+}
+.plans-link--dark:hover {
+  background-color: rgb(44, 40, 48);
+  color: white;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
   color: white;
   font-size: 72px;
   line-height: 64px;
   letter-spacing: -1px;
   max-width: 540px;
   margin: 0;
+  font-family: "DM Serif Display";
+  position: relative;
+  padding-top: 80px;
 }
-
-.intro-text {
-  line-height: 26px;
-  color: white;
-  margin-bottom: 40px;
-}
-
-.intro-link {
-  border: 1px solid white;
-  color: white;
-  z-index: 1;
-}
-.intro-link:hover {
-  color: rgb(44, 40, 48);
+.title::after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 150px;
+  height: 1px;
   background-color: white;
-}
-
-.intro-img {
-  margin-bottom: -100px;
+  content: "";
 }
