@@ -33,193 +33,39 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .header-hamburger {
-//     width: 32px;
-//     height: 32px;
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     background-color: transparent;
-//     display: none;
-// }
-
-// .hamburger--open {
-//     background-image: url('/img/hamburger-open.svg');
-// }
-
-// .hamburger--close {
-//     background-image: url('/img/hamburger-close.svg');
-// }
-
-// @media only screen and (max-width:560px) {
-//     .header-nav {
-//         position: absolute;
-//         background-color: $dark;
-//         display: none;
-//         top: 71px;
-//         left: 0;
-//         width: 100%;
-//         height: calc(100vh - 71px);
-//         flex-direction: column;
-//         text-align: center;
-//     }
-
-//     .header-hamburger {
-//         display: inline-block;
-//     }
-
-//     .header-nav-list {
-//         flex-direction: column;
-//         margin-top: 40px;
-//     }
-
-//     .header-list-item {
-//         margin: 0;
-//         margin-bottom: 20px;
-//     }
-
-//     .header-item-link {
-//         font-size: 20px;
-//         line-height: 40px;
-//         letter-spacing: 1.3636363744735718px;
-//         color: white;
-//     }
-
-//     .header-link {
-//         padding: 12px 50px;
-//         border: 2px solid white;
-//         color: white;
-//         font-size: 20px;
-//         line-height: 40px;
-//         letter-spacing: 1.3636363744735718px;
-//     }
-// }
+@media only screen and (max-width:590px) {
+    .header__nav {
+        position: absolute;
+        background-color: $dark;
+        display: block;
+        top: 62px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 62px);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__list {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .header__item {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .header__item-link {
+        font-size: 20px;
+        line-height: 40px;
+        letter-spacing: 1.3636363744735718px;
+        color: white;
+    }
+
+    .header__plans-link {
+        padding: 12px 50px;
+        border: 2px solid white;
+        color: white;
+    }
+}
