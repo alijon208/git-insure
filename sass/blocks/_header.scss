@@ -1,5 +1,5 @@
 .header {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .header__container {
@@ -37,7 +37,7 @@
     .header__nav {
         position: absolute;
         background-color: $dark;
-        display: block;
+        display: none;
         top: 62px;
         left: 0;
         width: 100%;
@@ -63,9 +63,10 @@
         color: white;
     }
 
-    .header__plans-link {
+    .header__link {
         padding: 12px 50px;
         border: 2px solid white;
         color: white;
+        font-size: 20px;
     }
 }

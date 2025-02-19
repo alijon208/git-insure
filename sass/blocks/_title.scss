@@ -18,3 +18,25 @@
         content: '';
     }
 }
+@media only screen and (max-width:1080px){
+    .title--light{
+        font-size: 52px;
+    line-height: 50px;
+    }
+}
+@media only screen and (max-width:840px){
+    .title--light{
+        font-size: 42px;
+        line-height: 40px;
+    }
+}
+@media only screen and (max-width:800px){
+    .title--light{
+        font-size: 48px;
+    }
+    .title{
+        &::after{
+            display: none;
+        }
+    }
+}

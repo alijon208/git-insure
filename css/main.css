@@ -1,8 +1,6 @@
 body {
   font-family: "Karla";
   overflow-x: hidden;
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 ul, ol {
@@ -12,7 +10,6 @@ ul, ol {
 
 a {
   text-decoration: none;
-  font-family: "Karla";
 }
 
 /* karla-regular - latin */
@@ -39,8 +36,99 @@ a {
   font-weight: 400;
   src: url("../fonts/dm-serif-display-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+.plans-link {
+  padding: 10px 20px;
+  transition: 500ms;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}
+.plans-link:hover {
+  background-color: white;
+  color: rgb(45, 38, 65);
+}
+
+.plans-link--dark {
+  padding: 10px 20px;
+  border: 2px solid rgb(44, 40, 48);
+  color: rgb(44, 40, 48);
+}
+.plans-link--dark:hover {
+  background-color: rgb(44, 40, 48);
+  color: white;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.hamburger {
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+  display: none;
+}
+
+.hamburger--open {
+  background-image: url("/img/hamburger-open.svg");
+}
+
+.hamburger--close {
+  background-image: url("/img/hamburger-close.svg");
+}
+
+@media only screen and (max-width: 590px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
+.title {
+  color: white;
+  font-size: 72px;
+  line-height: 64px;
+  letter-spacing: -1px;
+  max-width: 540px;
+  margin: 0;
+  font-family: "DM Serif Display";
+  position: relative;
+  padding-top: 80px;
+}
+.title::after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: white;
+  content: "";
+}
+
+@media only screen and (max-width: 1080px) {
+  .title--light {
+    font-size: 52px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .title--light {
+    font-size: 42px;
+    line-height: 40px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .title--light {
+    font-size: 48px;
+  }
+  .title::after {
+    display: none;
+  }
+}
 .header {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .header__container {
@@ -77,7 +165,7 @@ a {
   .header__nav {
     position: absolute;
     background-color: rgb(44, 40, 48);
-    display: block;
+    display: none;
     top: 62px;
     left: 0;
     width: 100%;
@@ -99,19 +187,23 @@ a {
     letter-spacing: 1.3636363745px;
     color: white;
   }
-  .header__plans-link {
+  .header__link {
     padding: 12px 50px;
     border: 2px solid white;
     color: white;
+    font-size: 20px;
   }
 }
 .intro {
   background-color: rgb(45, 38, 65);
-  position: relative;
-  max-width: 1490px;
-  margin: 0 auto;
 }
-.intro::after {
+
+.intro__container {
+  display: flex;
+  padding-top: 80px;
+  position: relative;
+}
+.intro__container::after {
   position: absolute;
   background-image: url("/img/intro-after.png");
   background-repeat: no-repeat;
@@ -119,26 +211,22 @@ a {
   width: 200px;
   height: 649px;
   bottom: -400px;
-  left: 0;
+  left: -180px;
 }
-.intro::before {
+.intro__container::before {
   position: absolute;
   background-image: url("/img/intro-before.png");
   background-repeat: no-repeat;
   content: "";
   width: 697px;
   height: 649px;
-  right: -260px;
-}
-
-.intro__container {
-  display: flex;
-  padding-top: 80px;
+  right: -450px;
+  top: 0;
 }
 
 .intro__content {
   margin-top: 60px;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .intro__text {
@@ -159,77 +247,41 @@ a {
 
 .intro__img {
   margin-bottom: -100px;
-  margin-top: 100px;
+  margin-top: 50px;
+  flex-shrink: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
-.plans-link {
-  padding: 10px 20px;
-  transition: 500ms;
-  border: 2px solid white;
-  color: white;
-  background-color: transparent;
+@media only screen and (max-width: 940px) {
+  .intro__img {
+    width: 440px;
+    height: auto;
+  }
 }
-.plans-link:hover {
-  background-color: white;
-  color: rgb(45, 38, 65);
+@media only screen and (max-width: 840px) {
+  .intro__img {
+    width: 340px;
+    height: auto;
+  }
+  .intro__content {
+    padding: 50px;
+  }
 }
-
-.plans-link--dark {
-  padding: 10px 20px;
-  border: 2px solid rgb(44, 40, 48);
-  color: rgb(44, 40, 48);
-}
-.plans-link--dark:hover {
-  background-color: rgb(44, 40, 48);
-  color: white;
-}
-
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.title {
-  color: white;
-  font-size: 72px;
-  line-height: 64px;
-  letter-spacing: -1px;
-  max-width: 540px;
-  margin: 0;
-  font-family: "DM Serif Display";
-  position: relative;
-  padding-top: 80px;
-}
-.title::after {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 150px;
-  height: 1px;
-  background-color: white;
-  content: "";
-}
-
-.hamburger {
-  width: 32px;
-  height: 32px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-  display: none;
-}
-
-.hamburger--open {
-  background-image: url("/img/hamburger-open.svg");
-}
-
-.hamburger--close {
-  background-image: url("/img/hamburger-close.svg");
-}
-
-@media only screen and (max-width: 590px) {
-  .hamburger {
-    display: inline-block;
+@media only screen and (max-width: 800px) {
+  .intro__container {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .intro__img {
+    width: 100%;
+    margin: 0;
+  }
+  .intro__content {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 50px;
   }
 }
