@@ -4,6 +4,7 @@
     border: 2px solid white;
     color: white;
     background-color: transparent;
+    z-index: 2;
     &:hover{
         background-color: white;
         color: $dark-blue;
@@ -13,6 +14,7 @@
     padding: 10px 20px;
     border: 2px solid $dark;
     color: $dark;
+    z-index: 1;
     &:hover{
         background-color: $dark;
         color: white;

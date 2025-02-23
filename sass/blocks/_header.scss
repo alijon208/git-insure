@@ -1,3 +1,12 @@
+@keyframes hamburger-opener{
+    0%{
+        top: -100vh;
+    }
+    100%{
+        top: calc(0vh - 71px);
+    }
+}
+
 .header {
     padding: 20px 0;
 }
@@ -38,14 +47,19 @@
         position: absolute;
         background-color: $dark;
         display: none;
-        top: 62px;
+        top: 71px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 62px);
+        height: 100vh;
         flex-direction: column;
         text-align: center;
+        z-index: 2;
     }
 
+    .header__nav--opened{
+        display: block;
+        animation: hamburger-opener 500ms;
+    }
     .header__list {
         flex-direction: column;
         margin-top: 50px;
