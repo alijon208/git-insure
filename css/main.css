@@ -9,6 +9,10 @@ body {
   margin: 0 auto;
 }
 
+.body--hidden {
+  overflow: hidden;
+}
+
 ul, ol {
   list-style: none;
   padding: 0;
@@ -172,10 +176,10 @@ a {
 }
 @keyframes hamburger-opener {
   0% {
-    top: -100vh;
+    top: -100%;
   }
   100% {
-    top: calc(0vh - 71px);
+    top: 71px;
   }
 }
 .header {
@@ -224,6 +228,10 @@ a {
     flex-direction: column;
     text-align: center;
     z-index: 2;
+    background-image: url("../../img/header-nav-after.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
   }
   .header__nav--opened {
     display: block;
